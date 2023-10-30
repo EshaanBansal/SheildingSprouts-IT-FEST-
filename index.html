@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShieldingSprouts - Child Protection App</title>
+    <link rel="stylesheet" href="style2.css"> <!-- You can create a separate CSS file for styling -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <!-- <script src="Index2.js"></script> -->
+</head>
+
+<body>
+
+    <header>
+        <h1>Shielding Sprouts</h1>
+        <p>Your child's safety is our top priority</p>
+    </header>
+
+    <section class="features">
+        <h2>Features</h2>
+        <div class="feature">
+            <a href="SafeRoute.html"><img src="Safe_Route_Icon.png" alt="Feature 1"></a>
+            <h3>Safe Route</h3>
+            <p>Find the safest and fastest way back to home.</p>
+        </div>
+
+        <div class="feature">
+            <a href="Profile Pic.html"><img src="Screenshot 2023-10-30 101153.png" alt="Feature 2"></a>
+            <h3>Personal Details</h3>
+            <p>Share your credentials diseases or any allergies.</p>
+        </div>
+
+        <div class="feature">
+            <a href="Emergency.html"><img src="Emergency_Contact_Icon.png" alt="Feature 3"></a>
+            <h3>Emergency Contacts</h3>
+            <p>Quickly connect with trusted contacts in case of emergencies.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 ShieldingSprouts. All rights reserved.</p>
+    </footer>
+
+    <input type="checkbox" id="active">
+    <label for="active" class="menu-btn" id="scrollingMenuBtn"><i class="fas fa-bars"></i></label>
+    <div class="wrapper">
+       <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="SafeRoute.html">Safe Route Icon</a></li>
+          <li><a href="Emergency.html">Emergency Contacts</a></li>
+          <li><a href="Profile Pic.html">Personal Details</a></li>
+       </ul>
+    </div>
+
+    <script>
+window.addEventListener('scroll', function() {
+    var navButton = document.getElementById('scrollingMenuBtn');
+    var wrapper = document.querySelector('.wrapper');
+    if (window.scrollY > 10) {
+        navButton.style.display = 'none';
+        wrapper.style.display = 'none';  // hide the circle as well
+    } else {
+        navButton.style.display = 'block';
+        wrapper.style.display = 'block';  // show the circle when scrolled up
+    }
+});
+    </script>
+    </body>
+
+</html>
+
+
+

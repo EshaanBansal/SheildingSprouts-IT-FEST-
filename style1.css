@@ -1,0 +1,85 @@
+        /* Basic resets */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #6d9292;
+            color: #333;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 80px auto;
+            padding: 40px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-weight: 500;
+            margin-bottom: 25px;
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        label {
+            display: block;
+            font-weight: 500;
+            margin-top: 15px;
+            padding-left: 5px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid #F1FAEE;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .btn-hover {
+            width: 100%;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+            text-align:center;
+            border: none;
+            border-radius: 5px;
+            background-size: 300% 100%;
+        
+            -o-transition: all .10s ease-in-out;
+            -webkit-transition: all .10s ease-in-out;
+            transition: all .10s ease-in-out;
+        }
+        
+        .btn-hover:hover {
+            background-position: 100% 0;
+            -o-transition: all .4s ease-in-out;
+            -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+        }
+        
+        .btn-hover:focus {
+            outline: none;
+        }
+
+        .btn-hover.color-1 {
+            background-image: linear-gradient(to right, #1d3557, #457b9d, #457b9d , #29528a);
+            box-shadow: 0 4px 15px 0 43291f;
+        }
+        

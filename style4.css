@@ -1,0 +1,108 @@
+/* Base styles */
+header {
+    background-color: #009688;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    /* background-image: linear-gradient(to right, #003049, #669BBC, #669BBC , #003049); */
+    /* background-image: linear-gradient(to right, #d32430, #831414, #661313 , #cf1e29); */
+    background-image: linear-gradient(to right, #1d3557, #457b9d, #457b9d , #29528a);
+    /* f1faee */
+    box-shadow: 0 4px 15px 0 43291f;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+}
+
+header, section, footer {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+section.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F7F9F9;
+    color: #333;
+    border-radius: 5px 5px 0 0;
+}
+
+header h1 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+header p {
+    margin: 5px 0;
+}
+
+section.disease {
+    margin-top: 10px;
+    border-radius: 0 0 5px 5px;
+    background-color: #78D5D7;
+}
+
+section.disease h2 {
+    color: #ffffff;
+}
+
+section.disease p {
+    color: #ffffff
+}
+
+/* On smaller screens, adjust padding and margins */
+@media screen and (max-width: 600px) {
+    header, section, footer {
+        padding: 10px;
+    }
+}
+
+/* ... Your existing CSS ... */
+
+header img {
+    max-width: 100%; /* Ensures image does not overflow container */
+    border-radius: 50%; /* Optional: Makes the image circular */
+    margin-bottom: 15px; /* Adds some spacing below the image */
+}
+
+@media screen and (max-width: 600px) {
+    header, section, footer {
+        padding: 15px; /* Increased padding a bit for better spacing */
+    }
+
+    header h1 {
+        font-size: 1.5em; /* Increase the size for better visibility */
+    }
+
+    header p {
+        font-size: 1.1em; /* Slightly bigger text for phone numbers and emails */
+        margin: 8px 0; /* Increased spacing for better readability */
+    }
+
+    section.disease h2, footer p {
+        font-size: 1.3em; /* Larger headers and footer text for visibility */
+    }
+
+    section.disease p {
+        font-size: 1.1em; /* Slightly larger paragraph text */
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #009688;
+    color: #fff;
+    background-image: linear-gradient(to right, #1d3557, #457b9d, #457b9d , #29528a);
+    box-shadow: 0 4px 15px 0 43291f;
+}

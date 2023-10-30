@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Contact Modal</title>
+    <link rel="stylesheet" href="style3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <input type="checkbox" id="active">
+    <label for="active" class="menu-btn" id="scrollingMenuBtn"><i class="fas fa-bars"></i></label>
+    <div class="wrapper">
+       <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="SafeRoute.html">Safe Route Icon</a></li>
+        <li><a href="Emergency.html">Emergency Contacts</a></li>
+        <li><a href="Profile Pic.html">Personal Details</a></li>
+     </ul>
+    </div>
+
+
+    <header>
+        <h1>Shielding Sprouts</h1>
+        <p>Your child's safety is our top priority</p>
+    </header>
+
+<button onclick="showModal()" class="btn-hover color-2">Add New Contact</button>
+
+<!-- Modal structure -->
+<div class="modal" id="contactModal">
+    <div class="modal-content">
+        <h2>Add Contact</h2>
+        <label>Name: <input type="text" id="contactName" required></label><br><br>
+        <label>Number: <input type="text" id="contactNumber" required></label><br><br>
+        <button onclick="saveContact()" class="btn-hover color-1">Save</button>
+        <button onclick="hideModal()" class="close-btn">×</button>
+    </div>
+</div>
+
+
+<h2>Saved Contacts:</h2>
+<ul id="contactsList"></ul>
+
+<script>
+    function showModal() {
+        document.getElementById('contactModal').style.display = 'block';
+    }
+
+    function hideModal() {
+        document.getElementById('contactModal').style.display = 'none';
+    }
+    
+    function saveContact() {
+    // Get values
+    const name = document.getElementById('contactName').value;
+    const number = document.getElementById('contactNumber').value;
+
+    // Check if fields are empty
+    if (!name.trim() || !number.trim()) {
+        alert('Both name and number are required!');
+        return; // Exit the function early
+    }
+
+    // Add to list
+    const listItem = document.createElement('li');
+    listItem.innerHTML = `
+        <span>${name}: ${number}</span>
+        <div>
+            <button onclick="callContact('${number}')" >Call</button>
+            <button onclick="messageContact('${number}')" >Message</button>
+        </div>`;
+    document.getElementById('contactsList').appendChild(listItem);
+
+    // Clear fields and hide modal
+    document.getElementById('contactName').value = '';
+    document.getElementById('contactNumber').value = '';
+    hideModal();
+}
+
+
+    function callContact(number) {
+        alert('Calling ' + number);
+    }
+
+    function messageContact(number) {
+        alert('Messaging ' + number);
+    }
+
+
+    listItem.innerHTML = `
+    <span>${name}: ${number}</span>
+    <div>
+        <button onclick="callContact('${number}')" class="btn-hover color-1">Call</button>
+        <button onclick="messageContact('${number}')" class="btn-hover color-1">Message</button>
+    </div>`;
+
+    window.addEventListener('scroll', function() {
+    var navButton = document.getElementById('scrollingMenuBtn');
+    var wrapper = document.querySelector('.wrapper');
+    if (window.scrollY > 10) {
+        navButton.style.display = 'none';
+        wrapper.style.display = 'none';  // hide the circle as well
+    } else {
+        navButton.style.display = 'block';
+        wrapper.style.display = 'block';  // show the circle when scrolled up
+    }
+});
+
+</script>
+</body>
+</html>
